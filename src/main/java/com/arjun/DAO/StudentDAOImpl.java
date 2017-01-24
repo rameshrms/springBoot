@@ -28,4 +28,17 @@ public class StudentDAOImpl {
     public Collection<Student> getallStudents(){
  return this.students.values();
     }
+    public Student getStudentById(int id){
+        return students.get(id);
+    }
+
+    public void removeByd(int id) {
+        students.remove(id);
+    }
+
+    public void updateStudentById(Student student) {
+      Student updateStudent  =students.get(student.getId());
+      updateStudent.setName(student.getName());
+        updateStudent.setCourse(student.getCourse());
+    }
 }

@@ -19,4 +19,16 @@ public class StudentServiceImpl {
       return  studentDAO.getallStudents();
     }
 
+    public Student getStudentById(int id){
+        return studentDAO.getStudentById(id);
+    }
+
+    public void removeById(int id) {
+        studentDAO.removeByd(id);
+    }
+
+
+    public void updateStudentById(Student student) {
+        studentDAO.updateStudentById( student);
+    }
 }
